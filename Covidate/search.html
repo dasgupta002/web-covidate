@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Covidate - Find Oxygen Lead</title>
+        <link rel = "stylesheet" type = "text/css" href = "min.css" />
+        <link rel = "stylesheet" 
+              href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+              integrity = "sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+              crossorigin = "anonymous" />
+    </head>
+    <body>
+        <div class = "container">
+          <form id = "search">    
+            <input type = "text" placeholder = "Search leads . ."  class = "search_bar" id = "region_lookup" required>
+            <button type = "submit"><i class="fa fa-search fa-lg"></i></button>
+          </form>
+          <table id = "oxygen"></table>
+          </table>
+        </div>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+        <script type = "text/javascript" src = "side.js"></script>
+    </body>
+</html>

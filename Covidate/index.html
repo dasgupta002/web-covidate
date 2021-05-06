@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Covidate</title>
+        <link rel = "stylesheet" type = "text/css" href = "core.css" />
+    </head>
+    <body>
+        <div class = "container">
+          <div class = "wrapper">  
+            <div class = "info">
+              <strong>Covidate</strong>
+              <p>
+              Our is a pledge to fight against corona virus. We are trying to map the oxygen lead,
+              so that in hour of need one can get needed info from our database. Please verify all contact 
+              details before entering here. Spread this tool such that everyone in need gets to use it.
+              </p> 
+              <p class = "search"><button><a href = "search.html">Search Leads</a></button></p>
+            </div>
+            <div class = "contact">
+              <h3>Fill Up Any Oxygen Lead(Any Region)</h3>
+              <div class = "alert">Lead saved successfully</div>
+                <form id = "supplier_data">
+                  <p>
+                    <label>Name Of Supplier</label>
+                    <input type = "text" name = "supplier" id = "supplier_name" required>
+                  </p> 
+                  <p>
+                    <label>Region</label>
+                    <input type = "text" name = "region" id = "supplier_region" required>
+                  </p>
+                  <p>
+                    <label>Contact Number</label>
+                    <input type = "tel" name = "contact" id = "supplier_contact" required>
+                  </p>
+                  <p class = "full">
+                    <button type = "submit">Submit Lead</button>
+                  </p>
+                </form>
+            </div>
+          </div>  
+        </div>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+        <script type = "text/javascript" src = "main.js"></script>
+    </body>
+</html>
