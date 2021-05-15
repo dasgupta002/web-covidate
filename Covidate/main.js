@@ -16,9 +16,9 @@ var oxygen_lead = firebase.database().ref("oxygen-lead");
 var form = document.getElementById("supplier_data");
 
 var name_field = document.getElementById("supplier_name");
-var region_field = document.getElementById("supplier_region");
+var region_field = document.getElementById("supply_region");
 var contact_field = document.getElementById("supplier_contact");
-var type_field = document.getElementById("supplier_type");
+var type_field = document.getElementById("supply_type");
 var status_field = document.getElementById("supplier_status");
 
 form.addEventListener("submit", sendDataToFirebase);
@@ -50,7 +50,7 @@ function storeDataIntoFirebase(name, region, contact, type, status) {
         oxygen_supplier: name,
         supply_region: region,
         supplier_contact: contact
-        supplier_type: type,
+        supply_type: type,
         supplier_status: status
     });   
 }
