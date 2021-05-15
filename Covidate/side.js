@@ -24,7 +24,7 @@ function searchOxygenLead(region) {
                 var name = childSnapshot.val().oxygen_supplier;
                 var contact = childSnapshot.val().supplier_contact;
                 var region = childSnapshot.val().supply_region;
-                var type = childSnapshot.val().supply_type;
+                var type = childSnapshot.val().supplier_type;
                 var status = childSnapshot.val().supplier_status;
                 
                 constructDisplayTable(name, contact, region, type, status);                
@@ -62,7 +62,7 @@ function constructDisplayTable(name, contact, region, type, status) {
 
 function createTableHeader() {
     var table_header = document.createElement("tr");
-    var header_html = "<th>Oxygen Supplier</th><th>Supplier Contact</th><th>Supply Region</th><th>Supply Type</th><th>Supplier Status</th>";
+    var header_html = "<th>Oxygen Supplier</th><th>Supplier Contact</th><th>Supply Region</th><th>Supplier Type</th><th>Supplier Status</th>";
     table_header.innerHTML = header_html;
     table.appendChild(table_header);
 }
