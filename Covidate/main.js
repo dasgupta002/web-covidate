@@ -18,6 +18,8 @@ var form = document.getElementById("supplier_data");
 var name_field = document.getElementById("supplier_name");
 var region_field = document.getElementById("supplier_region");
 var contact_field = document.getElementById("supplier_contact");
+var type_field = document.getElementById("supplier_type");
+var status_field = document.getElementById("supplier_status");
 
 form.addEventListener("submit", sendDataToFirebase);
 
@@ -27,8 +29,10 @@ function sendDataToFirebase(event) {
     var name = name_field.value;
     var region = region_field.value;
     var contact = contact_field.value;
+    var type = type_field.value;
+    var status = status_field.value;
 
-    storeDataIntoFirebase(name, region.toLowerCase(), contact);
+    storeDataIntoFirebase(name, region.toLowerCase(), contact, type, status);
 
     document.querySelector(".alert").style.display = "block";
 
@@ -39,12 +43,14 @@ function sendDataToFirebase(event) {
     form.reset();
 }    
 
-function storeDataIntoFirebase(name, region, contact) {
+function storeDataIntoFirebase(name, region, contact, type, status) {
     var new_lead = oxygen_lead.push();
 
     new_lead.set({
         oxygen_supplier: name,
         supply_region: region,
         supplier_contact: contact
+        supplier_type: type,
+        supplier_status: status
     });   
 }
