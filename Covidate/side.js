@@ -24,8 +24,10 @@ function searchOxygenLead(region) {
                 var name = childSnapshot.val().oxygen_supplier;
                 var contact = childSnapshot.val().supplier_contact;
                 var region = childSnapshot.val().supply_region;
+                var type = childSnapshot.val().supply_type;
+                var status = childSnapshot.val().supplier_status;
                 
-                constructDisplayTable(name, contact, region);                
+                constructDisplayTable(name, contact, region, type, status);                
             });
         } else {
             confirm("No Lead Found");            
@@ -51,16 +53,16 @@ function searchCalledForOxygenLead(event) {
     searchOxygenLead(region.toLowerCase());
 }
 
-function constructDisplayTable(name, contact, region) {
+function constructDisplayTable(name, contact, region, type, status) {
     var distributor_row = document.createElement("tr");
-    var distributor_html = "<td>" + name + "</td>" + "<td>" + contact + "</td>" + "<td>" + region + "</td>";
+    var distributor_html = "<td>" + name + "</td>" + "<td>" + contact + "</td>" + "<td>" + region + "</td>" + "<td>" + type + "</td>" + "<td>" + status + "</td>";
     distributor_row.innerHTML = distributor_html;
     table.appendChild(distributor_row);
 }
 
 function createTableHeader() {
     var table_header = document.createElement("tr");
-    var header_html = "<th>Oxygen Supplier</th><th>Supplier Contact</th><th>Supply Region</th>";
+    var header_html = "<th>Oxygen Supplier</th><th>Supplier Contact</th><th>Supply Region</th><th>Supply Type</th><th>Supplier Status</th>";
     table_header.innerHTML = header_html;
     table.appendChild(table_header);
 }
